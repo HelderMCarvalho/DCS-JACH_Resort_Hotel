@@ -1,0 +1,5 @@
+Subprojeto de "Reserva de quartos"
+
+Este subprojeto é responsável por fazer todo o tipo 
+de reservas de quartos e de verificar se o quarto está
+ou não disponível para reserva.
