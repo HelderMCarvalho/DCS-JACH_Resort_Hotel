@@ -9,6 +9,10 @@
     <div class="row conteudo">
         <div class="col-md-4 offset-md-4 col-12">
             <h3>Início</h3>
+            <?php if(isset($_SESSION['aluguerAutenticado'])){ ?>
+                <a class="btn btn-warning" href="/paginas/consultaFinanceira.php">Consulta Financeira</a>
+            <?php } ?>
+
         </div>
     </div>
 <?php

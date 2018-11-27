@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 27-Nov-2018 às 20:08
+-- Generation Time: 27-Nov-2018 às 22:37
 -- Versão do servidor: 5.6.37
 -- PHP Version: 7.1.8
 
@@ -102,7 +102,15 @@ CREATE TABLE IF NOT EXISTS `produto` (
   `nome` varchar(50) NOT NULL COMMENT 'Nome do Produto',
   `preco` float NOT NULL COMMENT 'Preço do Produto',
   `idSeccao` int(11) NOT NULL COMMENT 'Id da Secção à qual este produto pertence'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Produto que pode ser vendido';
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='Produto que pode ser vendido';
+
+--
+-- Extraindo dados da tabela `produto`
+--
+
+INSERT INTO `produto` (`id`, `nome`, `preco`, `idSeccao`) VALUES
+(1, 'Limpeza', 10, 1),
+(2, 'Almoço', 10, 2);
 
 -- --------------------------------------------------------
 
@@ -116,7 +124,15 @@ CREATE TABLE IF NOT EXISTS `produtoAluguer` (
   `data` date NOT NULL COMMENT 'Data da venda do produto',
   `idAluguer` int(11) NOT NULL COMMENT 'Id do Aluguer ao qual a transação está relacionada',
   `idProduto` int(11) NOT NULL COMMENT 'Id do Produto ao qual a Transação está relacionada'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `produtoAluguer`
+--
+
+INSERT INTO `produtoAluguer` (`id`, `quantidade`, `data`, `idAluguer`, `idProduto`) VALUES
+(1, 1, '2018-11-27', 1, 1),
+(2, 2, '2018-11-28', 1, 2);
 
 -- --------------------------------------------------------
 
@@ -202,7 +218,15 @@ INSERT INTO `reserva` (`id`, `nome`, `apelido`, `numeroTelemovel`, `numeroAcompa
 CREATE TABLE IF NOT EXISTS `seccao` (
   `id` int(11) NOT NULL COMMENT 'Id de Secção de Produtos',
   `nome` varchar(50) NOT NULL COMMENT 'Nome da Secção'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Secção de Produtos (conjunto de produtos)';
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='Secção de Produtos (conjunto de produtos)';
+
+--
+-- Extraindo dados da tabela `seccao`
+--
+
+INSERT INTO `seccao` (`id`, `nome`) VALUES
+(1, 'Quarto'),
+(2, 'Restaurante');
 
 -- --------------------------------------------------------
 
@@ -314,12 +338,12 @@ ALTER TABLE `hospede`
 -- AUTO_INCREMENT for table `produto`
 --
 ALTER TABLE `produto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id do Produto';
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id do Produto',AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `produtoAluguer`
 --
 ALTER TABLE `produtoAluguer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id da Transação';
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id da Transação',AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `quarto`
 --
@@ -334,7 +358,7 @@ ALTER TABLE `reserva`
 -- AUTO_INCREMENT for table `seccao`
 --
 ALTER TABLE `seccao`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id de Secção de Produtos';
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id de Secção de Produtos',AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `tipoQuarto`
 --

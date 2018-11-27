@@ -9,6 +9,9 @@
     margin-bottom: 20px;
     text-align: center;
 }
+.formTable table{
+    border: #000000 2px solid;
+}
 
 @media (max-width: 360px) {
     .conteudo{
