@@ -1,0 +1,46 @@
+.minhaNav div ul li .btnNav {
+
+    border: #000000 2px solid;
+    box-shadow: 3px 5px;
+    padding: 0;
+    margin: 8px 12px 0 5px;
+}
+.formTable{
+    margin: 20px 0 0 5px;
+
+}
+.formDatas{
+    margin: 10px 0 0 5px;
+}
+.formTable table{
+    border: #000000 2px solid;
+}
+
+.formDatas div label{
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0 0 0 -40px;
+}
+.formDatas div button{
+    margin: 19px 0 0 0;
+}
+
+@media (max-width: 767px) {
+    .formTable{
+        margin: 20px 0 0 -14px;
+
+    }
+    .formDatas{
+        margin: 10px 0 0 -14px;
+    }
+
+    .formDatas div button{
+
+        margin: 10px 0 0 200px;
+    }
+
+}
+
+.marginR50{
+    margin-right: 50px;
+}
