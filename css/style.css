@@ -5,6 +5,10 @@
     box-shadow: 0 0 0 0.2rem #ffc107;
     border: 1px solid #ffc107;
 }
+.reserva h3{
+    margin-bottom: 20px;
+    text-align: center;
+}
 
 @media (max-width: 360px) {
     .conteudo{

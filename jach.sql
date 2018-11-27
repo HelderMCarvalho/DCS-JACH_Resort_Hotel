@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 27-Nov-2018 às 18:51
+-- Generation Time: 27-Nov-2018 às 20:08
 -- Versão do servidor: 5.6.37
 -- PHP Version: 7.1.8
 
@@ -52,7 +52,23 @@ CREATE TABLE IF NOT EXISTS `fotografia` (
   `id` int(11) NOT NULL COMMENT 'Id da Fotografia',
   `caminho` varchar(535) NOT NULL COMMENT 'Caminho do ficheiro da fotografia',
   `idTipoQuarto` int(11) NOT NULL COMMENT 'Id do Tipo de Quarto ao qual a Fotografia está relacionada'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Fotografias dos tipos de quartos';
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COMMENT='Fotografias dos tipos de quartos';
+
+--
+-- Extraindo dados da tabela `fotografia`
+--
+
+INSERT INTO `fotografia` (`id`, `caminho`, `idTipoQuarto`) VALUES
+(1, '/img/quartoMedio.jpg', 2),
+(2, '/img/quartoMedio2.jpg', 2),
+(3, '/img/quartoMedio3.jpg', 2),
+(4, '/img/quartoPequeno.jpg', 1),
+(5, '/img/quartoPequeno2.jpg', 1),
+(6, '/img/quartoPequeno3.jpg', 1),
+(15, '/img/quartoGrande.jpg', 3),
+(16, '/img/quartoGrande2.jpg', 3),
+(17, '/img/quartoGrande3.jpg', 3),
+(18, '/img/quartoGrande4.jpg', 3);
 
 -- --------------------------------------------------------
 
@@ -111,14 +127,32 @@ CREATE TABLE IF NOT EXISTS `produtoAluguer` (
 CREATE TABLE IF NOT EXISTS `quarto` (
   `id` int(11) NOT NULL COMMENT 'Id do Quarto',
   `idTipoQuarto` int(11) NOT NULL COMMENT 'Id do Tipo de Quarto ao qual este Quarto pertence'
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='Quarto';
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COMMENT='Quarto';
 
 --
 -- Extraindo dados da tabela `quarto`
 --
 
 INSERT INTO `quarto` (`id`, `idTipoQuarto`) VALUES
-(1, 1);
+(1, 1),
+(2, 1),
+(3, 1),
+(4, 1),
+(5, 1),
+(6, 1),
+(7, 1),
+(8, 1),
+(9, 1),
+(10, 1),
+(11, 1),
+(12, 1),
+(13, 1),
+(14, 1),
+(15, 1),
+(16, 1),
+(17, 2),
+(19, 2),
+(18, 3);
 
 -- --------------------------------------------------------
 
@@ -135,7 +169,29 @@ CREATE TABLE IF NOT EXISTS `reserva` (
   `dataCheckIn` date NOT NULL COMMENT 'Data de Check-in',
   `dataCheckOut` date NOT NULL COMMENT 'Data de Check-Out',
   `idTipoQuarto` int(11) NOT NULL COMMENT 'Id do Tipo de Quarto reservado'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Reserva de quarto';
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COMMENT='Reserva de quarto';
+
+--
+-- Extraindo dados da tabela `reserva`
+--
+
+INSERT INTO `reserva` (`id`, `nome`, `apelido`, `numeroTelemovel`, `numeroAcompanhantes`, `dataCheckIn`, `dataCheckOut`, `idTipoQuarto`) VALUES
+(1, 'teste', '1', 123456789, 1, '2018-11-27', '2018-11-30', 1),
+(2, 'teste', '2', 123456789, 1, '2018-11-27', '2018-11-30', 1),
+(3, 'teste', '3', 123456789, 1, '2018-11-27', '2018-11-30', 1),
+(4, 'teste', '4', 123456789, 1, '2018-11-27', '2018-11-30', 1),
+(5, 'teste', '5', 123456789, 1, '2018-11-27', '2018-11-30', 1),
+(6, 'teste', '6', 123456789, 1, '2018-11-27', '2018-11-30', 1),
+(7, 'teste', '7', 123456789, 1, '2018-11-27', '2018-11-30', 1),
+(8, 'teste', '8', 123456789, 1, '2018-11-27', '2018-11-30', 1),
+(9, 'teste', '9', 123456789, 1, '2018-11-27', '2018-11-30', 1),
+(10, 'teste', '10', 123456789, 1, '2018-11-27', '2018-11-30', 1),
+(11, 'teste', '11', 123456789, 1, '2018-11-27', '2018-11-30', 1),
+(12, 'teste', '12', 123456789, 1, '2018-11-27', '2018-11-30', 1),
+(13, 'teste', '13', 123456789, 1, '2018-11-27', '2018-11-30', 1),
+(14, 'teste', '14', 123456789, 1, '2018-11-27', '2018-11-30', 1),
+(15, 'teste', '15', 123456789, 1, '2018-11-27', '2018-11-30', 1),
+(18, 'teste', '16', 123456789, 1, '2018-11-27', '2018-11-30', 1);
 
 -- --------------------------------------------------------
 
@@ -158,14 +214,16 @@ CREATE TABLE IF NOT EXISTS `tipoQuarto` (
   `id` int(11) NOT NULL COMMENT 'Id do Tipo de Quarto',
   `nome` varchar(50) NOT NULL COMMENT 'Nome do Tipo de Quarto',
   `descricao` text NOT NULL COMMENT 'Descrição do tipo de quarto'
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='Tipo de Quarto (é a categoria do quarto)';
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='Tipo de Quarto (é a categoria do quarto)';
 
 --
 -- Extraindo dados da tabela `tipoQuarto`
 --
 
 INSERT INTO `tipoQuarto` (`id`, `nome`, `descricao`) VALUES
-(1, 'Quarto Grande', 'Quarto muito grande');
+(1, 'Quarto Pequeno', 'Quarto pequeno'),
+(2, 'Quarto Medio', 'Quarto medio'),
+(3, 'Quarto Grande', 'Quarto muito grande');
 
 --
 -- Indexes for dumped tables
@@ -246,7 +304,7 @@ ALTER TABLE `aluguer`
 -- AUTO_INCREMENT for table `fotografia`
 --
 ALTER TABLE `fotografia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id da Fotografia';
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id da Fotografia',AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `hospede`
 --
@@ -266,12 +324,12 @@ ALTER TABLE `produtoAluguer`
 -- AUTO_INCREMENT for table `quarto`
 --
 ALTER TABLE `quarto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id do Quarto',AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id do Quarto',AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT for table `reserva`
 --
 ALTER TABLE `reserva`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id da Reserva';
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id da Reserva',AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `seccao`
 --
@@ -281,7 +339,7 @@ ALTER TABLE `seccao`
 -- AUTO_INCREMENT for table `tipoQuarto`
 --
 ALTER TABLE `tipoQuarto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id do Tipo de Quarto',AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id do Tipo de Quarto',AUTO_INCREMENT=4;
 --
 -- Constraints for dumped tables
 --
