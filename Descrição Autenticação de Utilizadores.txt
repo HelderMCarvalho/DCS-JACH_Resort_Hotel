@@ -1,0 +1,6 @@
+Subprojeto de "Autenticação de Utilizadores"
+   Este subprojeto faz o login na aplicação web, validando o "Número de Aluguer" e a "Palavra-passe", verificando se existem/estão corretos.
+
+Dredênciais de Login:
+  Número de Aluguer: 1
+  Password: 12345
