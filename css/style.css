@@ -1,0 +1,16 @@
+.conteudo{
+    margin-top: 82px;
+}
+.form-control:focus{
+    box-shadow: 0 0 0 0.2rem #ffc107;
+    border: 1px solid #ffc107;
+}
+
+@media (max-width: 360px) {
+    .conteudo{
+        margin-top: 67px;
+    }
+    .titulo{
+        font-size: 1.75rem;
+    }
+}
