@@ -1,2 +1,10 @@
 # DCS-JACH_Resort_Hotel
-Trabalho de grupo para "Desenvolvimento Colaborativo de Software" (JACH Resort Hotel)
+Disciplina: Desenvolvimento Colaborativo de Software
+
+Tema: JACH Resort Hotel
+
+Elementos do grupo:
+- Hélder Carvalho, a15310
+- João Carvalho, a15310
+- António Fernandes, a15316
+- Carlos Simões, a15321
