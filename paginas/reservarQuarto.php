@@ -21,7 +21,7 @@
     }
     unset($_SESSION['reserva']);
 ?>
-<div class="container-fluid reserva conteudo">
+<div class="reserva conteudo">
     <div class="row">
         <div class="col-md-6 text-center">
             <h3><?=$quarto['nome']?></h3>

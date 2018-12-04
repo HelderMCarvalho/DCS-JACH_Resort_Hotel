@@ -26,7 +26,7 @@
 <?php
     require_once './parciais/head2.php';
 ?>
-<div class="container-fluid conteudo">
+<div class="conteudo">
     <div class="row">
         <div class="col-md-6 text-center">
             <h3>Consulta Financiera</h3>

@@ -11,7 +11,10 @@
             <h3>Início</h3>
             <?php if(isset($_SESSION['aluguerAutenticado'])){ ?>
                 <a class="btn btn-warning" href="/paginas/consultaFinanceira.php">Consulta Financeira</a>
-            <?php } ?>
+            <?php } else{ ?>
+                <a class="btn btn-warning" href="/paginas/reservas.php">Reservas</a>
+                <a class="btn btn-warning" href="/paginas/checkIn.php">Check-In</a>
+            <?php   } ?>
 
         </div>
     </div>

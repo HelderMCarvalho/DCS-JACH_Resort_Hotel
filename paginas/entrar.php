@@ -17,7 +17,7 @@
                 </div>
             <?php } unset ($_SESSION['erroEntrar']); ?>
             <h3>Entrar</h3>
-            <form action="../php/entrarBD.php" method="post">
+            <form action="/php/entrarBD.php" method="post">
                 <div class="form-group">
                     <label for="inputNumeroAluguer">Número de Aluguer:</label>
                     <input type="number" class="form-control" id="inputNumeroAluguer" name="inputNumeroAluguer">
